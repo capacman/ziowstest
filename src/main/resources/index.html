@@ -1,0 +1,21 @@
+<head>
+    <meta charset="UTF-8">
+    <title>example ws</title>
+    <script type="text/javascript">
+        const exampleSocket = new WebSocket("ws://localhost:8080/subscriptions");
+        exampleSocket.addEventListener("error", (event) => {
+            console.log("WebSocket error: ", event);
+        });
+        exampleSocket.addEventListener("open", (event) => {
+            exampleSocket.send("Hello Server!");
+        });
+        exampleSocket.addEventListener("message", (event) => {
+            console.log("Server message: ", event.data);
+        });
+    </script>
+</head>
+
+<body>
+    <h1>example ws</h1>
+    <p>hello world</p>
+</body>

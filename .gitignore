@@ -1,0 +1,6 @@
+/.bsp/
+target/
+project/target
+project/project
+project/metals.sbt
+.metals
